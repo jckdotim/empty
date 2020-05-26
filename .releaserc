@@ -1,0 +1,7 @@
+---
+repositoryUrl: git@github.com:jckdotim/empty.git
+verifyConditions: ['@semantic-release/github']
+prepare: []
+publish: ['@semantic-release/github']
+success: ['@semantic-release/github']
+fail: ['@semantic-release/github']

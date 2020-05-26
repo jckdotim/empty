@@ -11,3 +11,12 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
+  semantic-release:
+    jobs:
+      docker:
+        - image: circleci/node:10
+      resource_class: medium
+      steps:
+        - checkout
+        - run: yarn global add --no-progress --non-interactive "semantic-release" "@semantic-release/exec"
+        - run: $(yarn global bin)/semantic-release

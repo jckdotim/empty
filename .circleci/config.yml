@@ -20,8 +20,4 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
-  semantic-release:
-    jobs:
-      - semantic-release:
-          requires:
-            - welcome
+      - semantic-release
